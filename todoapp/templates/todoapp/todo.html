@@ -1,0 +1,45 @@
+{% extends "todoapp/base.html" %} {% block title %}
+<title>To Do Tasks</title>
+{% endblock %} {% block content %}
+
+
+<div class="add mb-2">
+    <h2>Todo List</h2>
+    <a href="{% url 'create' %}" class="btn btn-secondary">Add Task</a>
+</div>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Category</th>
+            <th scope="col">Date Created</th>
+            <th scope="col">Completion Date</th>
+            <th scope="col">View Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if todos %} {% for todo in todos %}
+        <tr>
+            <td>{{todo.title}}</td>
+            <td>{{todo.category}}</td>
+            <td>{{todo.created}}</td>
+            <td>{{todo.due_date}}</td>
+            <td>
+                <a href="{% url 'detail' todo.id %}" class="btn btn-info">Details</a>
+            </td>
+
+        </tr>
+        {% endfor %} {% else %}
+        <div class="row">
+            <div class="col-md-12">
+                <p class="alert alert-success">
+                    No Items To Display
+                </p>
+            </div>
+        </div>
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}

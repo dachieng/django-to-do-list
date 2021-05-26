@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(253, 251, 251) !important;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav.navbar.navbar-expand-md {
+    background-color: #333;
+    padding: 10px;
+}
+
+a.nav-link {
+    color: #bbb;
+}
+
+li.nav-item {
+    background-color: #000000;
+    margin-right: 3px;
+    border-radius: 2px;
+}
+
+a.nav-link:hover {
+    color: #ffa500 !important;
+}
+
+a.navbar-brand {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+button.navbar-toggler {
+    color: white!important;
+}
+
+div.card {
+    border: 1px solid #bbb !important;
+    margin-bottom: 4px;
+}
+
+h4,
+h5 {
+    color: rgb(8, 8, 77);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #bbb;
+}
+
+div.body {
+    margin-top: 4px;
+}
+
+label {
+    margin-top: 4px;
+    margin-bottom: 3px;
+    color: rgb(8, 8, 77);
+}
+
+span.asteriskField,
+small.form-text.text-muted {
+    display: none;
+}

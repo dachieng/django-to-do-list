@@ -1,0 +1,66 @@
+{% extends "todoapp/base.html" %} {% block title %}
+<title>Detail</title>
+{% endblock %} {% block content %}
+<div class="card mt-4 p-2">
+    <div class="container">
+
+        <div class="body">
+
+            <div class="row mt-2">
+                <div class="col-md-4">
+                    <h5>Task Details</h5>
+                    <div class="column">
+                        <h6>Title : </h6>
+                        <p>{{task.title}}</p>
+                    </div>
+                    <div class="column">
+                        <h6>Category : </h6>
+                        <p>{{task.category}}</p>
+                    </div>
+
+                    <div class="column">
+                        <h6>Date Created : </h6>
+                        <p>{{task.created}}</p>
+                    </div>
+                    <div class="column">
+                        <h6>Completion Date : </h6>
+                        <p>{{task.due_date}}</p>
+                    </div>
+
+                </div>
+                <div class="col-md-8">
+                    <h4>Task Actions</h4>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Update</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>
+                                    <a href="{% url 'edit' task.id %}" class="btn btn-info">Update Task</a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'create' %}" class="btn btn-secondary">Add Task</a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'delete' task.id %}" class="btn btn-danger">Delete</a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
